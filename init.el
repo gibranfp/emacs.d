@@ -2,6 +2,7 @@
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
+(require 'install-all) ;; comment after the packages have been installed
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-nav)
