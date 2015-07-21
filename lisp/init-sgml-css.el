@@ -3,4 +3,4 @@
 (add-hook 'sgml-mode-hook 'rainbow-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode)
 
-(provide 'init-css)
+(provide 'init-sgml-css)
