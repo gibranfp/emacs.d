@@ -44,7 +44,10 @@
 (global-set-key (kbd "C-c M-x") 'helm-M-x)
 
 ;; =================== iedit ====================
-(define-key global-map (kbd "C-c i") 'iedit-mode)
+(global-set-key (kbd "C-c i") 'iedit-mode)
+
+;; =================== flycheck tip ====================
+(global-set-key (kbd "C-c C-n") 'flycheck-tip-cycle)
 
 ;; =================== Newline ====================
 (global-set-key (kbd "M-RET") 'sanityinc/newline-at-end-of-line)

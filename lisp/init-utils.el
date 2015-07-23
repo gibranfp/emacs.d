@@ -1,12 +1,3 @@
-;;=============== Autopair ================
-(eval-after-load "autopair-autoloads"
-  '(progn
-     (autopair-global-mode 1)
-     (setq autopair-autowrap t)))
-
-;;  ============ Shows pairing brackets =================
-(show-paren-mode 1)
-
 ;; ============ Shows matching paren in echo area =================
 (defadvice show-paren-function
   (after show-matching-paren-offscreen activate)
@@ -20,15 +11,6 @@
 			     (blink-matching-open))))
     (when matching-text (message matching-text))))
 
-;; ============== yasnippet ========================
-(eval-after-load "yasnippet-autoloads"
-  '(progn
-     (yas-global-mode 1)
-))
-(add-hook 'prog-mode-hook
-	  '(lambda ()
-	     (yas-minor-mode)))
-
 ;; ========= Delete the current file (from github@purcell/emacs.d) =========
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
@@ -39,20 +21,31 @@
     (delete-file (buffer-file-name))
     (kill-this-buffer)))
 
-;; ========= Rename the current file (from github@purcell/emacs.d) ==========
-(defun rename-this-file-and-buffer (new-name)
+;; ========= Rename the current file ==========
+;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
+(defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
-  (interactive "New name: ")
+  (interactive "sNew name: ")
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
-    (unless filename
-      (error "Buffer '%s' is not visiting a file!" name))
-    (if (get-buffer new-name)
-        (message "A buffer named '%s' already exists!" new-name)
-      (progn
-        (when (file-exists-p filename)
-         (rename-file filename new-name 1))
-        (rename-buffer new-name)
-        (set-visited-file-name new-name)))))
+    (if (not filename)
+        (message "Buffer '%s' is not visiting a file!" name)
+      (if (get-buffer new-name)
+          (message "A buffer named '%s' already exists!" new-name)
+        (progn
+          (rename-file name new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil))))))
+
+(defun comment-or-uncomment-region-or-line ()
+    "Comments or uncomments the region or the current line if there's no active region."
+    (interactive)
+    (let (beg end)
+        (if (region-active-p)
+            (setq beg (region-beginning) end (region-end))
+            (setq beg (line-beginning-position) end (line-end-position)))
+        (comment-or-uncomment-region beg end)))
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
 
 (provide 'init-utils)
