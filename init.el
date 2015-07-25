@@ -1,4 +1,8 @@
 ; -*- coding: utf-8 -*-
+(add-to-list 'load-path "~/.emacs.d/elpa/benchmark-init-20141004.609")
+
+(require 'benchmark-init)
+(benchmark-init/activate)
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
@@ -15,10 +19,10 @@
 (require 'init-company)
 (require 'init-hs-minor-mode)
 (require 'init-flycheck)
-(require 'init-ede-cedet)
 (require 'init-cpp)
 (require 'init-python)
 (require 'init-latex)
 (require 'init-sgml-css)
 (require 'init-keybind)
 (require 'init-misc)
+(benchmark-init/deactivate)

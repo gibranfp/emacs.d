@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
 
 ;; =============== Duplicate lines ========================;
-(global-set-key (kbd "C-c d") 'duplicate-line)  
+(global-set-key (kbd "C-c d") 'duplicate-line)
 
 ;; ============== Windmove bindings =================
 (global-set-key (kbd "C-c <left>")  'windmove-left)
@@ -34,14 +34,19 @@
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
 ;; =================== Helm ====================
-(global-set-key (kbd "C-c C-f") 'helm-projectile)
-(global-set-key (kbd "C-c f") 'helm-for-files)
-(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(global-set-key (kbd "C-c h p") 'helm-projectile)
+(global-set-key (kbd "C-c C-f") 'helm-for-files)
 (global-set-key (kbd "C-c h o") 'helm-occur)
-(global-set-key (kbd "C-c C-f") 'helm-find-files)
+(global-set-key (kbd "C-c h f") 'helm-find-files)
+(global-set-key (kbd "C-c h l") 'helm-locate)
+(global-set-key (kbd "C-c h a") 'helm-apt)
 (global-set-key (kbd "C-c b") 'helm-mini)
-(global-set-key (kbd "C-c k") 'helm-show-kill-ring)
-(global-set-key (kbd "C-c M-x") 'helm-M-x)
+(global-set-key (kbd "C-c h k") 'helm-show-kill-ring)
+(global-set-key (kbd "C-c h SPC") 'helm-all-mark-rings)
+(global-set-key (kbd "C-c h M-x") 'helm-M-x)
+
+;; =================== ffap ====================
+(global-set-key (kbd "C-c g f") 'ffap)
 
 ;; =================== iedit ====================
 (global-set-key (kbd "C-c i") 'iedit-mode)
