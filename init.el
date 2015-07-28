@@ -1,13 +1,8 @@
 ; -*- coding: utf-8 -*-
-(add-to-list 'load-path "~/.emacs.d/elpa/benchmark-init-20141004.609")
-
-(require 'benchmark-init)
-(benchmark-init/activate)
-(setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (require 'init-packages)
-;; (require 'install-all) ;; comment after the packages have been installed
+(require 'install-all) ;; comment after the packages have been installed
 (require 'init-ui)
 (require 'init-autopair)
 (require 'init-ace-jump)
@@ -25,4 +20,3 @@
 (require 'init-sgml-css)
 (require 'init-keybind)
 (require 'init-misc)
-(benchmark-init/deactivate)

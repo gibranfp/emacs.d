@@ -1,8 +1,8 @@
 ;;; init-cpp --- "Initialization for C/C++ modes"
 
 ;; EDE projects
-(ede-cpp-root-project "smh" :file "~/Dropbox/projects/Search-MinHashing/src/mhcmd.c"
-                      :include-path '("../include"))
+;; (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Search-MinHashing/src/mhcmd.c"
+;;                       :include-path '("../include"))
 
 ;; (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Sampled-MinHashing/src/smh/smhcmd.c"
 ;;                       :include-path '("../../include"))
