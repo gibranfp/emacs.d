@@ -11,7 +11,7 @@
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
-	 nil
+         nil
        (package-install package)
        package))
    packages))
@@ -22,49 +22,54 @@
     (package-refresh-contents))
 
 (ensure-package 'async
-		'auto-complete
-		'autopair
-		'company
-		'company-c-headers
-		'company-cmake
-		'async
-		'company-irony
-		'company-jedi
-		'cpputils-cmake
-		'dash
-		'ecb
-		'emmet-mode
-		'expand-region
-		'flx-ido
-		'flx-isearch
-		'flycheck
-		'flycheck-irony
-		'flycheck-color-mode-line
-		'flymake
-		'flymake-easy
-		'flymake-python-pyflakes
-		'function-args
-		'helm
-		'helm-projectile
-		'ibuffer-projectile
-		'ido-ubiquitous
-		'iedit
-		'impatient-mode
-		'irony
-		'irony-eldoc
-		'jedi
-		'jedi-core
-		'js2-mode
-		'magit ;; use with emacs-24-4 or greater
-		'multiple-cursors
-		'powerline
-		'projectile
-		'sr-speedbar
-		'projectile-speedbar
-		'rainbow-mode
-		'simple-httpd
-		'smex
-		'stickyfunc-enhance
-		'yasnippet)
+                'auto-complete
+                'autopair
+                'company
+                'company-c-headers
+                'company-cmake
+                'async
+                'company-irony
+                'company-jedi
+                'cpputils-cmake
+                'dash
+                'ecb
+                'emmet-mode
+                'expand-region
+                'flx-ido
+                'flx-isearch
+                'flycheck
+                'flycheck-irony
+                'flycheck-color-mode-line
+                'flymake
+                'flymake-easy
+                'flymake-python-pyflakes
+                'function-args
+                'helm
+                'helm-c-yasnippet
+                'helm-bibtex
+                'helm-bibtexkey
+                'helm-fuzzy-find
+                'helm-projectile
+                'ibuffer-projectile
+                'ido-ubiquitous
+                'iedit
+                'impatient-mode
+                'irony
+                'irony-eldoc
+                'jedi
+                'jedi-core
+                'js2-mode
+                'magit
+                'magit-gitflow
+                'multiple-cursors
+                'powerline
+                'projectile
+                'sr-speedbar
+                'projectile-speedbar
+                'rainbow-mode
+                'simple-httpd
+                'smex
+                'stickyfunc-enhance
+                'yasnippet)
 
 (provide 'install-all)

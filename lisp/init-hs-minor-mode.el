@@ -1,5 +1,6 @@
 ;;; init-hs-minor.el --- "Initialization for hs-minor-mode (folding)"
 
+;;; Code:
 (add-hook 'c-mode-common-hook   'hs-minor-mode)
 (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 (add-hook 'java-mode-hook       'hs-minor-mode)

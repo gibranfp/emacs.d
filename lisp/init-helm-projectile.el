@@ -1,5 +1,6 @@
 ;;; init-helm-projectile.el --- Settings for Helm and projectile
 
+;;; Code:
 ;; Helm settings
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match t

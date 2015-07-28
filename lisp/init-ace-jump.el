@@ -1,5 +1,6 @@
 ;;; init-ace-jump.el --- Settings for ace-jump-mode
 
+;;; Code:
 (autoload
   'ace-jump-mode
   "ace-jump-mode"

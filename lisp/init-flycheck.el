@@ -1,5 +1,6 @@
 ;;; init-flycheck.el --- Settings for flycheck
 
+;;; Code:
 (add-hook 'after-init-hook 'global-flycheck-mode)
 
 ;; Override default flycheck triggers

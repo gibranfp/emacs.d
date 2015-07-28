@@ -1,5 +1,6 @@
 ;;; init-cpp.el --- "Initialization for C/C++ modes"
 
+;;; Code:
 ;; cpputils-cmake settings
 (setq cppcm-write-flymake-makefile nil)
 (add-hook 'c-mode-common-hook

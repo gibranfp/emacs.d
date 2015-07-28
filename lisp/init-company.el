@@ -1,5 +1,6 @@
 ;;; init-company.el --- Settings for company
 
+;;; Code:
 (eval-after-load 'company
   '(progn
      

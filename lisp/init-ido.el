@@ -1,5 +1,6 @@
 ;;; init-ido.el --- Settings for ido
 
+;;; Code:
 (ido-mode t)
 (ido-ubiquitous-mode t)
 (ido-everywhere t)

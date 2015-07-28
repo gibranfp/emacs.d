@@ -1,5 +1,6 @@
 ;;; init-autopair.el --- General settings
 
+;;; Code:
 (eval-after-load "autopair-autoloads"
   '(progn
      (autopair-global-mode 1)

@@ -1,5 +1,6 @@
 ;;; init-yasnippet.el --- Settings for yasnippet
 
+;;; Code:
 (eval-after-load "yasnippet-autoloads"
   '(progn
      (yas-global-mode 1)

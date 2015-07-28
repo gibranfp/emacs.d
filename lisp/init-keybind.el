@@ -1,5 +1,9 @@
 ;;; init-keybind.el --- Key bindings
 
+;;; Code:
+;; Dired
+(global-set-key (kbd "C-x C-d") 'dired)
+
 ;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
@@ -15,13 +19,13 @@
 ;; Duplicate lines
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
-;; ============== Windmove bindings =================
+;; Windmove
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
-;;=============== Multiple Cursors bindings =========
+;; Multiple cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)

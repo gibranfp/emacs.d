@@ -1,5 +1,6 @@
 ;;; init-utils.el --- Utility functions
 
+;;; Code:
 (defadvice show-paren-function
     (after show-matching-paren-offscreen activate)
   "If the matching paren is offscreen, show the matching line in the

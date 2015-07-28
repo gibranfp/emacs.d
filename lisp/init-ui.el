@@ -1,5 +1,6 @@
 ;;; init-ui.el --- Settings for user interface
 
+;;; Code:
 ;; Avoids backup files
 (setq make-backup-files nil)
 
