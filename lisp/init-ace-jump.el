@@ -1,4 +1,4 @@
-;;; init-ace-jump --- Settings for ace-jump-mode
+;;; init-ace-jump.el --- Settings for ace-jump-mode
 
 (autoload
   'ace-jump-mode
@@ -10,7 +10,6 @@
   "ace-jump-mode"
   "ace jump back"
   t)
-(eval-after-load "ace-jump-mode"
-  '(ace-jump-mode-enable-mark-sync))
 
 (provide 'init-ace-jump)
+;;; init-ace-jump.el ends here

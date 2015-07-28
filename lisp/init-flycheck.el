@@ -1,4 +1,4 @@
-;;; init-flycheck --- Settings for flycheck
+;;; init-flycheck.el --- Settings for flycheck
 
 (add-hook 'after-init-hook 'global-flycheck-mode)
 
@@ -10,3 +10,4 @@
 (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
 
 (provide 'init-flycheck)
+;;; init-flycheck.el ends here

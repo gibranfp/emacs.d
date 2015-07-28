@@ -1,6 +1,9 @@
-;;; init-misc --- Miscellaneous settings
+;;; init-misc.el --- Miscellaneous settings
+
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 3)
 
 (provide 'init-misc)
+;;; init-misc.el ends here

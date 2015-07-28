@@ -1,4 +1,4 @@
-;;; init-yasnippet --- Settings for yasnippet
+;;; init-yasnippet.el --- Settings for yasnippet
 
 (eval-after-load "yasnippet-autoloads"
   '(progn
@@ -9,3 +9,4 @@
 	     (yas-minor-mode)))
 
 (provide 'init-yasnippet)
+;;; init-yasnippet.el ends here

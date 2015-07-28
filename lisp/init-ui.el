@@ -1,4 +1,4 @@
-;;; init-ui --- Settings for user interface
+;;; init-ui.el --- Settings for user interface
 
 ;; Avoids backup files
 (setq make-backup-files nil)
@@ -72,3 +72,4 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 (provide 'init-ui)
+;;; init-ui.el ends here

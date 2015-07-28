@@ -1,17 +1,17 @@
-;; ============ Shows matching paren in echo area =================
+;;; init-utils.el --- Utility functions
+
 (defadvice show-paren-function
-  (after show-matching-paren-offscreen activate)
+    (after show-matching-paren-offscreen activate)
   "If the matching paren is offscreen, show the matching line in the
         echo area. Has no effect if the character before point is not of
         the syntax class ')'."
   (interactive)
   (let* ((cb (char-before (point)))
-	 (matching-text (and cb
-			     (char-equal (char-syntax cb) ?\) )
-			     (blink-matching-open))))
+         (matching-text (and cb
+                             (char-equal (char-syntax cb) ?\) )
+                             (blink-matching-open))))
     (when matching-text (message matching-text))))
 
-;; ========= Delete the current file (from github@purcell/emacs.d) =========
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
   (interactive)
@@ -21,7 +21,6 @@
     (delete-file (buffer-file-name))
     (kill-this-buffer)))
 
-;; ========= Rename the current file ==========
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
@@ -39,13 +38,21 @@
           (set-buffer-modified-p nil))))))
 
 (defun comment-or-uncomment-region-or-line ()
-    "Comments or uncomments the region or the current line if there's no active region."
-    (interactive)
-    (let (beg end)
-        (if (region-active-p)
-            (setq beg (region-beginning) end (region-end))
-            (setq beg (line-beginning-position) end (line-end-position)))
-        (comment-or-uncomment-region beg end)))
-(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+        (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
+
+(defun duplicate-line()
+  "Duplicate a line"
+  (interactive)
+  (kill-whole-line)
+  (yank)
+  (yank)
+  )
 
 (provide 'init-utils)
+;;; init-utils.el --- ends here

@@ -1,4 +1,4 @@
-;;; init-autopair --- General settings
+;;; init-autopair.el --- General settings
 
 (eval-after-load "autopair-autoloads"
   '(progn
@@ -6,3 +6,4 @@
      (setq autopair-autowrap t)))
 
 (provide 'init-autopair)
+;;; init-autopair.el ends here

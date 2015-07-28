@@ -1,4 +1,4 @@
-;;; init-ido --- Settings for ido
+;;; init-ido.el --- Settings for ido
 
 (ido-mode t)
 (ido-ubiquitous-mode t)
@@ -8,3 +8,4 @@
 (setq ido-use-faces nil)
 
 (provide 'init-ido)
+;;; init-ido.el ends here

@@ -1,16 +1,18 @@
-;;=============== Expand region =========
+;;; init-keybind.el --- Key bindings
+
+;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;;=============== hippie expand =========
+;; hippie expand
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-;;=========== Kill whole line and newline character =========
+;; Kill whole line and newline character
 (global-set-key (kbd "C-q") 'kill-whole-line)
 
-;;=========== Comment and uncomment region/line =========
+;; Comment and uncomment region/line
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region-or-line)
 
-;; =============== Duplicate lines ========================;
+;; Duplicate lines
 (global-set-key (kbd "C-c d") 'duplicate-line)
 
 ;; ============== Windmove bindings =================
@@ -25,15 +27,15 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
-;; =================== SMEX ====================
+;; SMEX
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-;; =================== Ace jump ====================
+;; Ace jump
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
-;; =================== Helm ====================
+;; Helm
 (global-set-key (kbd "C-c h p") 'helm-projectile)
 (global-set-key (kbd "C-c C-f") 'helm-for-files)
 (global-set-key (kbd "C-c h o") 'helm-occur)
@@ -45,10 +47,10 @@
 (global-set-key (kbd "C-c h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c h M-x") 'helm-M-x)
 
-;; =================== ffap ====================
+;; ffap
 (global-set-key (kbd "C-c g f") 'ffap)
 
-;; =================== iedit ====================
+;; iedit
 (global-set-key (kbd "C-c i") 'iedit-mode)
 
 ;; =================== flycheck tip ====================
@@ -66,4 +68,10 @@
 ;; ============= Newline and indent ================
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; Magit
+(global-set-key [(meta f12)] 'magit-status)
+(global-set-key (kbd "C-c m s") 'magit-status)
+(global-set-key (kbd "C-c m d") 'magit-dispatch-popup)
+
 (provide 'init-keybind)
+;;; init-keybind.el ends here

@@ -1,13 +1,4 @@
-;;; init-cpp --- "Initialization for C/C++ modes"
-
-;; EDE projects
-;; (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Search-MinHashing/src/mhcmd.c"
-;;                       :include-path '("../include"))
-
-;; (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Sampled-MinHashing/src/smh/smhcmd.c"
-;;                       :include-path '("../../include"))
-
-;; (ede-cpp-root-project "objdisc" :file "~/Dropbox/projects/object_discovery/smh_object_discovery/src/make_ifs_oxfd.c")
+;;; init-cpp.el --- "Initialization for C/C++ modes"
 
 ;; cpputils-cmake settings
 (setq cppcm-write-flymake-makefile nil)
@@ -35,18 +26,16 @@
 (defun my/c-common-mode-hook ()
   ;; ede
   (ede-mode 1)
-  
+  ;; ede projects
+  (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Search-MinHashing/src/mhcmd.c"
+			:include-path '("../include"))
+
   ;; semantic
   (semantic-mode 1)
   (global-semanticdb-minor-mode 1)
   (global-semantic-idle-scheduler-mode 1)
   (global-semantic-idle-summary-mode 1)
-  (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
-
-  ;; company
-  (company-mode)
-  (add-to-list 'company-backends 'company-irony)
-  (add-to-list 'company-backends 'company-c-headers))
+  (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode))
 (add-hook 'c++-mode-hook 'my/c-common-mode-hook)
 (add-hook 'c-mode-hook 'my/c-common-mode-hook)
 (add-hook 'objc-mode-hook 'my/c-common-mode-hook)
@@ -55,3 +44,4 @@
 (setq c-default-style "k&r")
 
 (provide 'init-cpp)
+;;; init-cpp.el ends here

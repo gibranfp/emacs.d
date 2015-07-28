@@ -1,4 +1,4 @@
-;;; init-latex --- Settings for latex-mode
+;;; init-latex.el --- Settings for latex-mode
 
 ;; General settings
 (setq TeX-auto-save t)
@@ -14,7 +14,6 @@
 ;; Spell checker on the fly
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'company-mode)
 
 ;; Reference reftex
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
@@ -28,3 +27,4 @@
 (setq outline-minor-mode-prefix "\C-c \C-o")
 
 (provide 'init-latex)
+;;; init-latex.el ends here
