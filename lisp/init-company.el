@@ -6,7 +6,7 @@
      
      (add-to-list 'company-backends 'company-irony)
      (add-to-list 'company-backends 'company-c-headers)
-     
+
      (setq company-dabbrev-downcase nil)
      (setq company-show-numbers t)
      (setq company-begin-commands '(self-insert-command))
@@ -14,6 +14,7 @@
      (setq company-minimum-prefix-length 1)
      (setq company-clang-insert-arguments nil)
      ))
+
 
 (add-hook 'c-mode-common-hook 'company-mode)
 (add-hook 'emacs-lisp-mode-hook 'company-mode)

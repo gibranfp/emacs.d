@@ -8,12 +8,7 @@
             (if (derived-mode-p 'c-mode 'c++-mode)
                 (cppcm-reload-all)
               )))
-
-;; Hooks to irony
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-
+ 
 ;; Some irony settings
 (defun my-irony-mode-hook ()
   (define-key irony-mode-map [remap completion-at-point]
@@ -25,11 +20,18 @@
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
 
 (defun my/c-common-mode-hook ()
+  (irony-mode t)
+  
+  ;; Fixes c-headers paths as cpputils-cmake writes the user path in the system path
+  (setq company-c-headers-path-user company-c-headers-path-system)
+  (setq company-c-headers-path-system '("/usr/include/" "/usr/local/include/"))
+  
   ;; ede
-  (ede-mode 1)
+  (global-ede-mode t)
+  
   ;; ede projects
-  (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Search-MinHashing/src/mhcmd.c"
-			:include-path '("../include"))
+  (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Sampled-MinHashing/src/smh/smhcmd.c"
+                        :include-path '("../../include"))
 
   ;; semantic
   (semantic-mode 1)
