@@ -29,10 +29,6 @@
   ;; ede
   (global-ede-mode t)
   
-  ;; ede projects
-  (ede-cpp-root-project "smh" :file "~/Dropbox/projects/Sampled-MinHashing/src/smh/smhcmd.c"
-                        :include-path '("../../include"))
-
   ;; semantic
   (semantic-mode 1)
   (global-semanticdb-minor-mode 1)
