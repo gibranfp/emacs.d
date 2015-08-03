@@ -15,10 +15,9 @@
      (setq company-clang-insert-arguments nil)
      ))
 
-
 (add-hook 'c-mode-common-hook 'company-mode)
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
-(add-hook 'LaTeX-mode-hook 'company-mode)
+(add-hook 'latex-mode-hook 'company-mode)
 (add-hook 'css-mode-hook 'company-mode)
 (add-hook 'sgml-mode-hook 'company-mode)
 (add-hook 'cmake-mode-hook 'company-mode)

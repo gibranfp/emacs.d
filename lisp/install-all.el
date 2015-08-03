@@ -28,6 +28,7 @@
                 'company-c-headers
                 'company-cmake
                 'async
+                'cmake-mode
                 'company-irony
                 'company-jedi
                 'cpputils-cmake
