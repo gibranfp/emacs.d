@@ -21,6 +21,7 @@
 (add-hook 'css-mode-hook 'company-mode)
 (add-hook 'sgml-mode-hook 'company-mode)
 (add-hook 'cmake-mode-hook 'company-mode)
+(add-hook 'sh-mode-hook 'company-mode)
 
 (provide 'init-company)
 ;;; init-company.el ends here
